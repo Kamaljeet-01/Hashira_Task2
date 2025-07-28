@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Meal Plan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .day-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+    }
+    .day-card h2 {
+      text-align: center;
+      color: #3498db;
+      margin-bottom: 15px;
+    }
+    .combo {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border-left: 5px solid #2980b9;
+      border-radius: 5px;
+    }
+    .combo strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+    #generateBtn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #generateBtn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍽️ Weekly Meal Combo Planner</h1>
+  <button id="generateBtn">Generate Weekly Menu</button>
+  <div id="menuDisplay" class="menu-container"></div>
+
+  <script>
+    document.getElementById('generateBtn').addEventListener('click', () => {
+      fetch('/generate-menu')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch menu');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const display = document.getElementById('menuDisplay');
+          display.innerHTML = ''; // Clear old data
+
+          data.menu_plan.forEach(day => {
+            const dayCard = document.createElement('div');
+            dayCard.className = 'day-card';
+
+            const heading = document.createElement('h2');
+            heading.textContent = day.day;
+            dayCard.appendChild(heading);
+
+            day.combos.forEach(combo => {
+              const comboDiv = document.createElement('div');
+              comboDiv.className = 'combo';
+              comboDiv.innerHTML = `
+                <strong>Combo ID:</strong> ${combo.combo_id}<br>
+                <strong>Main:</strong> ${combo.main}<br>
+                <strong>Side:</strong> ${combo.side}<br>
+                <strong>Drink:</strong> ${combo.drink}<br>
+                <strong>Calories:</strong> ${combo.calorie_count} kcal<br>
+                <strong>Popularity:</strong> ${combo.popularity_score}<br>
+                <strong>Reason:</strong> ${combo.reasoning}
+              `;
+              dayCard.appendChild(comboDiv);
+            });
+
+            display.appendChild(dayCard);
+          });
+        })
+        .catch(err => {
+          alert('Error: ' + err.message);
+        });
+    });
+  </script>
+</body>
+</html>
