@@ -1,0 +1,135 @@
+[
+  {
+    "item_name": "Chicken Biryani",
+    "category": "main",
+    "calories": 520,
+    "taste_profile": "spicy",
+    "popularity_score": 0.78
+  },
+  {
+    "item_name": "Paneer Butter Masala",
+    "category": "main",
+    "calories": 480,
+    "taste_profile": "savory",
+    "popularity_score": 0.82
+  },
+  {
+    "item_name": "Veg Pulao",
+    "category": "main",
+    "calories": 430,
+    "taste_profile": "savory",
+    "popularity_score": 0.76
+  },
+  {
+    "item_name": "Grilled Fish",
+    "category": "main",
+    "calories": 500,
+    "taste_profile": "savory",
+    "popularity_score": 0.80
+  },
+  {
+    "item_name": "Rajma Chawal",
+    "category": "main",
+    "calories": 470,
+    "taste_profile": "spicy",
+    "popularity_score": 0.77
+  },
+  {
+    "item_name": "Garlic Naan",
+    "category": "side",
+    "calories": 210,
+    "taste_profile": "savory",
+    "popularity_score": 0.79
+  },
+  {
+    "item_name": "Masala Fries",
+    "category": "side",
+    "calories": 230,
+    "taste_profile": "spicy",
+    "popularity_score": 0.75
+  },
+  {
+    "item_name": "Green Salad",
+    "category": "side",
+    "calories": 100,
+    "taste_profile": "fresh",
+    "popularity_score": 0.74
+  },
+  {
+    "item_name": "Sweet Corn",
+    "category": "side",
+    "calories": 120,
+    "taste_profile": "sweet",
+    "popularity_score": 0.76
+  },
+  {
+    "item_name": "Steamed Veggies",
+    "category": "side",
+    "calories": 90,
+    "taste_profile": "fresh",
+    "popularity_score": 0.78
+  },
+  {
+    "item_name": "Masala Chaas",
+    "category": "drink",
+    "calories": 90,
+    "taste_profile": "savory",
+    "popularity_score": 0.76
+  },
+  {
+    "item_name": "Lassi",
+    "category": "drink",
+    "calories": 150,
+    "taste_profile": "sweet",
+    "popularity_score": 0.82
+  },
+  {
+    "item_name": "Iced Tea",
+    "category": "drink",
+    "calories": 110,
+    "taste_profile": "sweet",
+    "popularity_score": 0.74
+  },
+  {
+    "item_name": "Mango Shake",
+    "category": "drink",
+    "calories": 180,
+    "taste_profile": "sweet",
+    "popularity_score": 0.79
+  },
+  {
+    "item_name": "Coconut Water",
+    "category": "drink",
+    "calories": 60,
+    "taste_profile": "fresh",
+    "popularity_score": 0.75
+  },
+  {
+    "item_name": "Palak Paneer",
+    "category": "main",
+    "calories": 450,
+    "taste_profile": "savory",
+    "popularity_score": 0.81
+  },
+  {
+    "item_name": "Chole Bhature",
+    "category": "main",
+    "calories": 610,
+    "taste_profile": "spicy",
+    "popularity_score": 0.74
+  },
+  {
+    "item_name": "Tandoori Roti",
+    "category": "side",
+    "calories": 150,
+    "taste_profile": "savory",
+    "popularity_score": 0.80
+  },
+  {
+    "item_name": "Mint Lemonade",
+    "category": "drink",
+    "calories": 95,
+    "taste_profile": "fresh",
+    "popularity_score": 0.77
+  }
+]
